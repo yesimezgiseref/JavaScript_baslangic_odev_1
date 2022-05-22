@@ -24,28 +24,7 @@
         Merhaba, <strong><span id="myName"></span></strong>! Hoş geldin!
       </div>
       <div id="myClock" class="clock" onload="showTime()"></div>
-      <script>
-  var aSaat = document.getElementById("myClock"); //aSaat adında bir değişken tanımladık.
-function format(saatcek) {
-var bSaat = saatcek.toString();
-if (bSaat.length == 1) {
-return "0" + bSaat;
-} else {
-return bSaat;
-}
-}
-function saatGuncelleme() { //Burada bilgisayarımızdan saati çekiyoruz.
-var tarih = new Date();
-var saat = tarih.getHours(); //Burada saati çekiyoruz.
-var dakika = tarih.getMinutes(); //Burada dakikayı çekiyoruz.
-var saniye = tarih.getSeconds(); //Burada saniyeyi çekiyoruz.
-var gunler= ["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi"];
-aSaat.textContent = format(saat) + ":" + format(dakika) + ":" + format(saniye) + "  " + format(gunler[tarih.getDay()]);
-}
 
-setInterval(saatGuncelleme, 1000);
-      </script>
-    
       <div class="text2 text-center">
         tarihinde
         <strong>Kodluyoruz Frontend Web Development Patikası</strong>'nın
